@@ -14,11 +14,9 @@ export default {
         //sessionStorage.setItem("loginInfo", JSON.stringify(this.$store.state.user))
     })
     var user = JSON.parse(sessionStorage.getItem("loginInfo"))
-    //console.log("load")
-    //console.log(user);
-
-    this.$store.state.user = user
-    //console.info("load finish");
+    if(user) {
+      this.$store.commit('updataUser', user)
+    }
   }
 }
 </script>

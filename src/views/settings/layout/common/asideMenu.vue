@@ -68,46 +68,6 @@ export default {
           'url': '',
           'children': [
             {
-              'id': 2,
-              'name': '流程定义',
-              'parentId': 1,
-              'status': 0,
-              'type': 'cd',
-              'url': '/home/workbench/deployment'
-            },
-            {
-              'id': 3,
-              'name': '流程列表',
-              'parentId': 1,
-              'status': 0,
-              'type': 'cd',
-              'url': '/home/workbench/process'
-            },
-            {
-              'id': 4,
-              'name': '任务列表',
-              'parentId': 1,
-              'status': 0,
-              'type': 'cd',
-              'url': '/home/workbench/task/null'
-            },
-            {
-              'id': 5,
-              'name': '动态修改',
-              'parentId': 1,
-              'status': 0,
-              'type': 'cd',
-              'url': '/home/workbench/process2'
-            },
-            {
-              'id': 6,
-              'name': '流程模拟',
-              'parentId': 1,
-              'status': 0,
-              'type': 'cd',
-              'url': '/home/workbench/task/null4'
-            },
-            {
               'id': 7,
               'name': '流程调试',
               'parentId': 1,

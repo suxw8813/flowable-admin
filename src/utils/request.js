@@ -39,10 +39,15 @@ const $http = axios.create()
 $http.interceptors.request.use(
     config => {
         console.info("intercept")
-        console.log(store.state.user.passport)
-        console.log(store.state.user.passwd)
+        //console.log(store.state.user.passport)
+        //console.log(store.state.user.passwd)
+        var user = JSON.parse(sessionStorage.getItem('loginInfo'));
+        console.log(2);
+        console.log(user.passport);
+        console.log(user.passwd);
+        console.log(2);
         config.headers = {
-            Authorization: b64EncodeUnicode(store.state.user.passport + ':' + store.state.user.passwd),
+            Authorization: b64EncodeUnicode(user.passport + ':' + user.passwd),
             ContentType: 'multipart/form-data'
         }
         console.log(config.headers)

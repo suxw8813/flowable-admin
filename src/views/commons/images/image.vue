@@ -1,9 +1,8 @@
 <template>
-    <div ref="imgDiv"></div>
+    <div ref="imgDiv" style='overflow:auto; width:100%; height:100%;'></div>
 </template>
 
 <script>
-import store from '@/store'
 
 export default {
     props: {
@@ -25,7 +24,11 @@ export default {
             window.URL = window.URL || window.webkitURL;
             var xhr = new XMLHttpRequest();
             xhr.open("get", imgUrl, true);
-            var str = store.state.user.passport + ':' + store.state.user.passwd;
+            console.log("1")
+            console.log(sessionStorage.getItem('loginInfo'))
+            console.log("1")
+            var user = JSON.parse(sessionStorage.getItem('loginInfo'));
+            var str = user.passport + ':' + user.passwd;
             var auth =  'Basic ' + btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, 
                                                                         function (match, p1) {
                                                                             return String.fromCharCode('0x' + p1)
