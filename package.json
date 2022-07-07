@@ -16,7 +16,7 @@
     "axios": "^0.18.1",
     "element-ui": "^2.4.6",
     "mockjs": "^1.0.1-beta3",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "sortablejs": "^1.7.0",
     "vue": "^2.5.2",
     "vue-quill-editor": "^3.0.6",
